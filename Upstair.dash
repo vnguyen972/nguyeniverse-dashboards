@@ -1,0 +1,40 @@
+#
+# Main arguments, all optional
+#
+title: Nguyen Home Assistant Upstair Panel
+widget_dimensions: [129, 116]
+widget_margins: [3, 3]
+columns: 6
+
+layout:
+    - include: top_row
+    - firetv_switch
+    - theater_room_light, upstair_climate,Dustin_room_temp
+    - include: bottom_row
+
+theater_room_light:
+    widget_type: light
+    title: Theater Room
+    title2: Light
+    entity: light.mqtt_theater_room_light
+
+Dustin_room_temp:
+    widget_type: sensor
+    title: Dustin's Room
+    title2: Temperature
+    units: "&deg;F"
+    entity: sensor.bedroom_temperature
+
+upstair_climate:
+    widget_type: climate
+    title: Upstair Climate
+    entity: climate.upstairs
+    step: 1
+    units: "&deg;F"
+
+firetv_switch:
+    widget_type: switch
+    title: Fire TV
+    entity: switch.firetv
+    icon_off: fa-television
+    icon_on: fa-television

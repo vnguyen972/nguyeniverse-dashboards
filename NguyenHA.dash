@@ -1,0 +1,111 @@
+#
+# Main arguments, all optional
+#
+title: Nguyen Home Assistant Panel
+widget_dimensions: [129, 116]
+widget_margins: [3, 3]
+columns: 6
+
+layout:
+    - include: top_row
+    - vu_presence, duyen_presence, dustin_presence, dillion_presence,dinner_table_light,theater_room_light
+    - trash_day_in, garage_door(2x1), front_door_lock,firetv_switch,upstair_climate
+    - theater_room(2x1),upstair_humidity,front_door,back_door,door_to_garage
+
+upstair_humidity:
+    widget_type: sensor
+    title: Upstair
+    title2: Humidity
+    entity: sensor.upstairs_humidity
+    units: "%"
+theater_room:
+    widget_type: sensor
+    title: Movie Theater
+    entity: sensor.theater_room
+    text_style: "font-size: 250%;"
+front_door_lock:
+    widget_type: sensor
+    title: Front Door
+    entity: lock.lockitron
+    text_style: "font-size: 250%;"
+garage_door:
+    widget_type: sensor
+    title: Garage Door
+    entity: sensor.gogogate4dash
+    text_style: "font-size: 250%;"
+
+trash_day_in:
+    widget_type: sensor
+    title: Trash Day In
+    entity: sensor.until_trash_day
+
+theater_room_light:
+    widget_type: light
+    title: Theater Room
+    title2: Light
+    entity: light.mqtt_theater_room_light
+dinner_table_light:
+    widget_type: light
+    title: Dinner Table
+    title2: Light
+    entity: light.mqtt_dinner_table_light
+vu_presence:
+    widget_type: device_tracker
+    title: Vu
+    device: vnguyen972_vugalaxy7
+    icon_on: fa-male
+    icon_color_active: "#00f"
+
+duyen_presence:
+    widget_type: device_tracker
+    title: Duyen
+    device: duyen972_duyengalaxys7
+    icon_on: fa-female
+    icon_color_active: "#00f"
+
+dustin_presence:
+    widget_type: device_tracker
+    title: Dustin
+    device: dustin972_dustingalaxy7
+    icon_on: fa-male
+    icon_color_active: "#00f"
+
+dillion_presence:
+    widget_type: device_tracker
+    title: Dillion
+    device: dillion972_hungsamsung
+    icon_on: fa-male
+    icon_color_active: "#00f"
+firetv_switch:
+    widget_type: switch
+    title: Fire TV
+    entity: switch.firetv
+    icon_off: fa-television
+    icon_on: fa-television
+Dustin_room_temp:
+    widget_type: sensor
+    title: Dustin's Room
+    title2: Temperature
+    units: "&deg;F"
+    entity: sensor.bedroom_temperature
+upstair_climate:
+    widget_type: climate
+    title: Upstair Climate
+    entity: climate.upstairs
+    step: 1
+    units: "&deg;F"
+front_door:
+    widget_type: sensor
+    title: Front Door
+    entity: sensor.front_door
+    text_style: "font-size: 250%;"
+door_to_garage:
+    widget_type: sensor
+    title: Door To Garage
+    entity: sensor.door_to_garage
+    text_style: "font-size: 250%;"
+back_door:
+    widget_type: sensor
+    title: Back Door
+    entity: sensor.back_door
+    text_style: "font-size: 250%;"

@@ -1,0 +1,19 @@
+#
+# Main arguments, all optional
+#
+title: Nguyen Home Assistant Downstair Panel
+widget_dimensions: [129, 116]
+widget_margins: [3, 3]
+columns: 6
+
+layout:
+    - include: top_row
+    - include: presence
+    - dinner_table_light
+    - include: bottom_row
+
+dinner_table_light:
+    widget_type: light
+    title: Dinner Table
+    title2: Light
+    entity: light.mqtt_dinner_table_light

@@ -1,0 +1,18 @@
+#
+# Main arguments, all optional
+#
+title: Nguyen Home Assistant Garage Panel
+widget_dimensions: [129, 116]
+widget_margins: [3, 3]
+columns: 6
+
+layout:
+    - include: top_row
+    - include: presence
+    - garage_control
+    - include: bottom_row
+
+garage_control:
+    widget_type: cover
+    title: Garage
+    entity: cover.garage_door

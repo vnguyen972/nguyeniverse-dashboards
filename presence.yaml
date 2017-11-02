@@ -1,0 +1,30 @@
+layout:
+    - vu_presence, duyen_presence, dustin_presence, dillion_presence
+    
+vu_presence:
+    widget_type: device_tracker
+    title: Vu
+    device: vnguyen972_vugalaxy7
+    icon_on: fa-male
+    icon_color_active: "#00f"
+
+duyen_presence:
+    widget_type: device_tracker
+    title: Duyen
+    device: duyen972_duyengalaxys7
+    icon_on: fa-female
+    icon_color_active: "#00f"
+
+dustin_presence:
+    widget_type: device_tracker
+    title: Dustin
+    device: dustin972_dustingalaxy7
+    icon_on: fa-male
+    icon_color_active: "#00f"
+
+dillion_presence:
+    widget_type: device_tracker
+    title: Dillion
+    device: dillion972_hungsamsung
+    icon_on: fa-male
+    icon_color_active: "#00f"

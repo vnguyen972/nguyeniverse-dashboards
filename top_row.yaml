@@ -1,0 +1,25 @@
+layout:
+    - clock(2x1), weather, condition(2x1),reload
+
+clock:
+    widget_type: clock
+    time_style: "color: yellow"
+
+condition:
+    widget_type: sensor
+    title: Condition
+    entity: sensor.dark_sky_summary
+    text_style: "font-size: 230%;"
+weather:
+    widget_type: sensor
+    title: Temperature
+    units: "&deg;F"
+    entity: sensor.dark_sky_temperature
+reload:
+    widget_type: reload
+    title: Reload
+#photo:
+#    widget_type: iframe
+#    refresh: 60
+#    img_list:
+#      - https://s-media-cache-ak0.pinimg.com/736x/6b/b2/a1/6bb2a1bfcca68e25c3334f30d6088d4a.jpg

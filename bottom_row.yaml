@@ -1,0 +1,23 @@
+layout:
+    - load_main, load_garage, load_downstair, load_upstair
+
+load_main:
+    widget_type: navigate
+    title: Main
+    dashboard: NguyenHA
+
+load_garage:
+    widget_type: navigate
+    title: Garage
+    dashboard: Garage
+
+load_downstair:
+    widget_type: navigate
+    title: Down Stair
+    dashboard: Downstair
+
+load_upstair:
+    widget_type: navigate
+    title: Upstair
+    dashboard: Upstair
+
